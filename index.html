@@ -1,268 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SARTOLAB Academy — Se ami la moda, creala da zero</title>
-  <meta name="description" content="SARTOLAB Academy — scuola di sartoria artigianale fondata da Sandra Corbani. Modellistica, taglio e confezione con metodo sartoriale.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description"
+    content="SARTOLAB Academy — scuola di sartoria artigianale fondata da Sandra Corbani. Modellistica, taglio e confezione con metodo sartoriale. Demo single-page." />
+  <meta name="theme-color" content="#f3efe7" />
+  <meta property="og:title" content="SARTOLAB Academy — Se ami la moda, creala da zero" />
+  <meta property="og:description" content="Scuola di sartoria artigianale: taglio, modellistica, confezione. A.A. 2026/27." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/jpeg" href="assets/sartolab-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/templates.min.css" />
+  <style>
+    /* Solo regole per il logo — tutto il resto viene dal sistema template */
+    .sl-brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none}
+    .sl-brand img{width:44px;height:44px;object-fit:cover;border:2px solid var(--cr-ink);box-shadow:3px 3px 0 var(--cr-red);transform:rotate(-2deg);background:#8b9095}
+    .sl-brand b{font-family:"Syne",sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:.03em}
+    .sl-brand b i{font-style:normal;color:var(--cr-red)}
+    .cr-sticker{padding:0;overflow:hidden}
+    .cr-sticker img{width:80%;height:80%;object-fit:cover;border-radius:50%;border:2px solid var(--cr-ink)}
+    .sl-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1.5px dashed var(--cr-ink);padding:6px 12px;border-radius:999px;opacity:.75}
+    .sl-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:clamp(36px,5vw,60px)}
+    @media (max-width:900px){.sl-grid-2{grid-template-columns:1fr}}
+  </style>
 </head>
-<body>
 
-  <div class="topbar">
-    Anno formativo 2026/27 — inizio a ottobre · Promozione Start entro il 1° ottobre — <a href="#contatti">dettagli su richiesta</a>
-  </div>
+<body class="theme-creative">
+  <a class="tpl-skip" href="#main">Vai al contenuto</a>
 
-  <header class="header">
-    <div class="header-inner">
-      <a href="#top" class="brand">SARTOLAB<small>ACADEMY</small></a>
-      <nav class="nav" aria-label="Navigazione principale">
+  <header class="tpl-nav">
+    <div class="tpl-wrap tpl-nav-inner">
+      <a class="sl-brand" href="#top" aria-label="SARTOLAB Academy — home">
+        <img src="assets/sartolab-logo.jpg" alt="Logo SARTOLAB Academy" width="44" height="44" />
+        <b>SARTOLAB<i>*</i></b>
+      </a>
+      <nav class="tpl-links tpl-panel" id="tpl-panel" aria-label="Navigazione principale">
         <a href="#academy">Academy</a>
+        <a href="#metodo">Metodo</a>
         <a href="#sandra">Sandra</a>
-        <a href="#su-misura">Su misura</a>
-        <a href="#creazioni">Creazioni</a>
-        <a href="#contatti">Contatti</a>
+        <a href="#oltre">Atelier</a>
       </nav>
-      <div class="header-cta">
-        <a href="#academy" class="btn">Scopri i corsi</a>
-        <button class="burger" data-burger aria-label="Apri menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a class="tpl-back" href="#academy">
+          <span aria-hidden="true">→</span><span class="tpl-back-label">Scopri i corsi</span>
+        </a>
+        <button class="tpl-burger" type="button" aria-expanded="false" aria-controls="tpl-panel" aria-label="Apri menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <nav class="mobile-menu" aria-label="Navigazione mobile">
-      <a href="#academy">Academy</a>
-      <a href="#sandra">Sandra</a>
-      <a href="#su-misura">Su misura</a>
-      <a href="#creazioni">Creazioni</a>
-      <a href="#contatti">Contatti</a>
-    </nav>
   </header>
 
-  <main id="top">
+  <main id="main">
 
-    <!-- 01 — HERO -->
-    <section class="section" style="border-top:0">
-      <div class="wrap grid-2">
-        <div class="title-block">
-          <p class="label reveal">Sartolab Academy</p>
-          <h1 class="reveal">Se ami la moda, <em>creala da zero.</em></h1>
-          <p class="lead reveal" style="margin-top:18px">Scuola di sartoria artigianale, modellistica, taglio e confezione.</p>
-          <div class="cta-row reveal">
-            <a href="#academy" class="btn">Scopri i corsi</a>
-            <a href="#sartolab" class="btn btn-ghost">Conosci Sartolab</a>
-          </div>
-          <div class="info-line reveal">
-            <span class="tag">Classi a numero chiuso</span>
-            <span class="tag">Anche per principianti</span>
-          </div>
-        </div>
-        <div class="ph ph-hero reveal" role="img" aria-label="Segnaposto fotografia hero">
-          <strong>Image placeholder — Hero</strong>
-          <span>Laboratorio / capo in lavorazione / Sandra</span>
+    <!-- Hero asimmetrico -->
+    <section class="cr-hero tpl-wrap" id="top" aria-labelledby="cr-hero-t">
+      <span class="cr-sticker" role="img" aria-label="Marchio SARTOLAB Academy">
+        <img src="assets/sartolab-logo.jpg" alt="" width="96" height="96" />
+      </span>
+      <p class="cr-hero-kicker"><span class="cr-dot" aria-hidden="true"></span> Scuola di sartoria artigianale — A.A. 2026/27 · inizio a ottobre</p>
+      <h1 id="cr-hero-t">
+        <span class="tpl-reveal is-in" style="display:block;">Se ami<br />la moda,</span>
+        <span class="hl-red">creala</span><br />
+        <span class="hl-outline">da zero.</span>
+      </h1>
+      <div class="cr-hero-row">
+        <p>
+          SARTOLAB Academy — modellistica, taglio e confezione con metodo sartoriale.
+          Percorsi anche per principianti, classi a numero chiuso, assistenza individuale.
+        </p>
+        <div class="cr-btns">
+          <a class="cr-btn" href="#academy">Scopri i corsi</a>
+          <a class="cr-btn cr-btn--alt" href="#sandra">Conosci Sartolab</a>
         </div>
       </div>
     </section>
 
-    <!-- 02 — INTRO -->
-    <section class="section" id="sartolab">
-      <div class="wrap grid-2">
-        <div class="ph ph-row reveal" role="img" aria-label="Segnaposto fotografia Sartolab">
-          <strong>Image placeholder — Sartoria</strong>
-          <span>Tessuto / dettaglio / mani al lavoro</span>
+    <!-- Marquee tipografico -->
+    <div class="tpl-marquee cr-marquee-text" aria-hidden="true">
+      <div class="tpl-marquee-track">
+        <span>Taglio —</span><span class="out">Modellistica —</span><span>Confezione —</span>
+        <span>Taglio —</span><span class="out">Modellistica —</span><span>Confezione —</span>
+      </div>
+    </div>
+
+    <!-- Video preview -->
+    <section class="tpl-video-preview tpl-wrap" aria-label="Video Sartolab in arrivo" style="padding-top:clamp(44px,6vw,80px);">
+      <div class="tpl-video-head">
+        <span class="tpl-video-title">Il laboratorio in movimento</span>
+        <span class="tpl-video-badge">Video in arrivo</span>
+      </div>
+      <div class="tpl-video-frame" style="border:2px solid var(--cr-ink);box-shadow:8px 8px 0 var(--cr-yellow);">
+        <div class="tpl-video-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M4 4h16v16H4z"></path>
+            <path d="M10 9.5v5l4.5-2.5z" stroke-linejoin="round"></path>
+          </svg>
+          <strong>Video Sartolab</strong>
+          <small>Mani al lavoro, tessuti, macchine — coming soon</small>
         </div>
-        <div class="title-block">
-          <p class="label reveal">Sartoria artigianale</p>
-          <h2 class="reveal">La sartoria, <em>dalle basi al capo finito.</em></h2>
-          <p class="body reveal" style="margin-top:16px">Sartolab è una scuola di sartoria artigianale dedicata a chi vuole imparare a progettare e realizzare i propri capi, partendo dai fondamentali fino alla realizzazione del capo finito.</p>
+      </div>
+      <p class="tpl-video-caption">Sostituire questo riquadro con il video reale dell'atelier.</p>
+    </section>
+
+    <!-- Academy -->
+    <section class="tpl-section tpl-wrap" id="academy" aria-labelledby="cr-ac-t">
+      <p class="tpl-kicker tpl-reveal">01 — Academy</p>
+      <h2 id="cr-ac-t" class="tpl-reveal" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);margin-top:14px;">Impara a creare</h2>
+      <p class="tpl-reveal" data-delay="1" style="margin-top:14px;max-width:62ch;color:var(--cr-mut);">
+        Percorsi formativi pensati anche per chi parte da zero, con classi a numero chiuso
+        e assistenza individuale. Nomi dei corsi, durate e prezzi — in arrivo con il programma 2026/27.
+      </p>
+      <div class="cr-services">
+        <article class="cr-card tpl-reveal">
+          <span class="cr-card-num">/01</span>
+          <h3>Taglio</h3>
+          <p>Il gesto preciso da cui tutto inizia: materia, drittofilo, segni e tagli puliti.</p>
+        </article>
+        <article class="cr-card tpl-reveal" data-delay="1">
+          <span class="cr-card-num">/02</span>
+          <h3>Modellistica</h3>
+          <p>Costruzione del cartamodello con metodo sartoriale: misure, vestibilità, proporzioni.</p>
+        </article>
+        <article class="cr-card tpl-reveal" data-delay="2">
+          <span class="cr-card-num">/03</span>
+          <h3>Confezione</h3>
+          <p>Assemblaggio e rifiniture: dal modello al capo che si indossa davvero.</p>
+        </article>
+      </div>
+      <div class="cr-btns tpl-reveal" style="margin-top:34px;">
+        <a class="cr-btn" href="#contatti">Scopri i corsi</a>
+        <span class="sl-tag">Promozione Start entro il 1° ottobre — dettagli su richiesta</span>
+      </div>
+    </section>
+
+    <!-- Gallery / lavori -->
+    <section class="tpl-section tpl-wrap" id="lavori" aria-labelledby="cr-wo-t">
+      <p class="tpl-kicker tpl-reveal">La materia prende forma</p>
+      <h2 id="cr-wo-t" class="tpl-reveal" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);margin-top:14px;">Scatti dall'atelier</h2>
+      <div class="cr-work">
+        <div class="cr-shot cr-shot-a tpl-ph tpl-reveal" role="img" aria-label="Segnaposto fotografia: laboratorio Sartolab"><span class="cr-shot-year">26/27</span><span class="cr-shot-label">Laboratorio — foto in arrivo</span></div>
+        <div class="cr-shot cr-shot-b tpl-ph tpl-reveal" data-delay="1" role="img" aria-label="Segnaposto fotografia: tessuti"><span class="cr-shot-year">26/27</span><span class="cr-shot-label">Tessuti — foto in arrivo</span></div>
+        <div class="cr-shot cr-shot-c tpl-ph tpl-reveal" role="img" aria-label="Segnaposto fotografia: dettagli sartoriali"><span class="cr-shot-year">26/27</span><span class="cr-shot-label">Dettagli — foto in arrivo</span></div>
+        <div class="cr-shot cr-shot-d tpl-ph tpl-reveal" data-delay="1" role="img" aria-label="Segnaposto fotografia: capi finiti"><span class="cr-shot-year">26/27</span><span class="cr-shot-label">Capi finiti — foto in arrivo</span></div>
+      </div>
+    </section>
+
+    <!-- Metodo -->
+    <section class="tpl-section tpl-wrap" id="metodo" aria-labelledby="cr-me-t">
+      <p class="tpl-kicker tpl-reveal">02 — Il metodo</p>
+      <h2 id="cr-me-t" class="tpl-reveal" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);margin-top:14px;">Dall'idea al capo finito</h2>
+      <p class="tpl-reveal" data-delay="1" style="margin-top:14px;max-width:62ch;color:var(--cr-mut);">
+        Un percorso pratico per comprendere la costruzione di un capo
+        e sviluppare tecnica, precisione e autonomia.
+      </p>
+      <div class="cr-process">
+        <div class="cr-step tpl-reveal">
+          <div><h3>Idea</h3><p>Progetto, tessuto, proporzioni: da dove comincia ogni capo.</p></div>
+        </div>
+        <div class="cr-step tpl-reveal" data-delay="1">
+          <div><h3>Modello</h3><p>Cartamodello sartoriale, prove e correzioni di vestibilità.</p></div>
+        </div>
+        <div class="cr-step tpl-reveal">
+          <div><h3>Taglio</h3><p>Piazzamento e taglio pulito, nel rispetto della materia.</p></div>
+        </div>
+        <div class="cr-step tpl-reveal" data-delay="1">
+          <div><h3>Confezione</h3><p>Assemblaggio, rifiniture a macchina e a mano, controllo.</p></div>
+        </div>
+        <div class="cr-step tpl-reveal">
+          <div><h3>Capo finito</h3><p>Prova finale e un capo realmente indossabile, fatto da te.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 03 — ACADEMY -->
-    <section class="section" id="academy">
-      <div class="wrap">
-        <div class="title-block" style="max-width:720px">
-          <p class="label reveal">01 — Academy</p>
-          <h2 class="reveal">Impara <em>a creare.</em></h2>
-          <p class="lead reveal" style="margin-top:14px">Percorsi formativi pensati anche per chi parte da zero, con classi a numero chiuso e assistenza individuale.</p>
-        </div>
-
-        <div class="grid-3 reveal" style="margin-top:36px">
-          <div>
-            <span class="n">01</span>
-            <h3>Taglio</h3>
-            <p>Il gesto preciso da cui tutto inizia: materia, segni, tagli puliti.</p>
-          </div>
-          <div>
-            <span class="n">02</span>
-            <h3>Modellistica</h3>
-            <p>Costruzione del cartamodello con metodo sartoriale.</p>
-          </div>
-          <div>
-            <span class="n">03</span>
-            <h3>Confezione</h3>
-            <p>Assemblaggio e rifiniture, fino al capo indossabile.</p>
-          </div>
-        </div>
-
-        <div class="info-line reveal">
-          <span class="tag">Nomi corsi — in arrivo</span>
-          <span class="tag">Durate / prezzi / orari — in arrivo</span>
-        </div>
-
-        <div class="cta-row reveal">
-          <a href="#contatti" class="btn">Scopri i corsi</a>
-        </div>
-
-        <div class="ph ph-wide reveal" style="margin-top:36px" role="img" aria-label="Segnaposto fotografia Academy">
-          <strong>Image placeholder — Academy</strong>
-          <span>Studenti in laboratorio / cartamodelli / macchine da cucire</span>
-        </div>
+    <!-- Sandra -->
+    <section class="tpl-section tpl-wrap" id="sandra" aria-labelledby="cr-sa-t">
+      <p class="tpl-kicker tpl-reveal">03 — Sandra Corbani</p>
+      <h2 id="cr-sa-t" class="tpl-reveal" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);margin-top:14px;">L'esperienza prima della formazione</h2>
+      <p class="tpl-reveal" data-delay="1" style="margin-top:14px;max-width:62ch;color:var(--cr-mut);">
+        Sandra Corbani ha maturato la propria esperienza nel mondo della sartoria professionale,
+        lavorando anche per Gucci, prima di intraprendere il proprio percorso indipendente.
+        Da questa esperienza nasce Sartolab, uno spazio dedicato alla formazione e alla creazione sartoriale.
+      </p>
+      <div class="cr-team">
+        <div class="cr-member tpl-reveal"><span class="cr-face" style="background:var(--cr-red);" aria-hidden="true"></span><span>Sandra Corbani<small>fondatrice · sarta</small></span></div>
+        <div class="cr-member tpl-reveal" data-delay="1"><span class="cr-face" style="background:var(--cr-yellow);" aria-hidden="true"></span><span>Sartolab<small>atelier · academy</small></span></div>
       </div>
     </section>
 
-    <!-- 04 — METODO -->
-    <section class="section" id="metodo">
-      <div class="wrap" style="max-width:820px">
-        <p class="label reveal">Il metodo</p>
-        <div class="title-block">
-          <h2 class="reveal">Dall'idea <em>al capo finito.</em></h2>
-          <p class="lead reveal" style="margin-top:14px">Un percorso pratico per comprendere la costruzione di un capo e sviluppare tecnica, precisione e autonomia.</p>
-        </div>
-        <div class="metodo-list reveal">
-          <div><b>01</b><strong>Idea</strong><span>Progetto e materia</span><i>↓</i></div>
-          <div><b>02</b><strong>Modello</strong><span>Cartamodello sartoriale</span><i>↓</i></div>
-          <div><b>03</b><strong>Taglio</strong><span>Precisione e tessuto</span><i>↓</i></div>
-          <div><b>04</b><strong>Confezione</strong><span>Assemblaggio e rifiniture</span><i>↓</i></div>
-          <div><b>05</b><strong>Capo finito</strong><span>Prova e capo indossabile</span><i>●</i></div>
-        </div>
+    <!-- Oltre l'Academy -->
+    <section class="tpl-section tpl-wrap" id="oltre" aria-labelledby="cr-ol-t">
+      <p class="tpl-kicker tpl-reveal">Oltre l'Academy</p>
+      <h2 id="cr-ol-t" class="tpl-reveal" style="font-family:Syne;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);margin-top:14px;">La sartoria continua</h2>
+      <p class="tpl-reveal" data-delay="1" style="margin-top:14px;max-width:62ch;color:var(--cr-mut);">
+        Servizi secondari rispetto all'Academy. Non si effettuano riparazioni sartoriali.
+      </p>
+      <div class="sl-grid-2">
+        <article class="cr-card tpl-reveal">
+          <span class="cr-card-num">/01</span>
+          <h3>Su misura</h3>
+          <p>Capi progettati e realizzati secondo la persona. Preventivo personalizzato, su appuntamento.</p>
+          <p style="margin-top:14px;"><a href="#contatti" style="font-weight:700;">Scopri il su misura →</a></p>
+        </article>
+        <article class="cr-card tpl-reveal" data-delay="1">
+          <span class="cr-card-num">/02</span>
+          <h3>Creazioni</h3>
+          <p>Drop e pezzi sartoriali realizzati da Sartolab, anche sullo shop Etsy ufficiale.</p>
+          <p style="margin-top:14px;display:flex;gap:16px;flex-wrap:wrap;"><a href="#contatti" style="font-weight:700;">Scopri le creazioni →</a><a href="https://www.etsy.com/it/shop/SARTOLABacademy?etsrc=sdt" target="_blank" rel="noopener" style="font-weight:700;">Etsy ↗</a></p>
+        </article>
       </div>
     </section>
 
-    <!-- 05 — SANDRA -->
-    <section class="section" id="sandra">
-      <div class="wrap grid-2">
-        <div class="title-block">
-          <p class="label reveal">02 — Sandra Corbani</p>
-          <h2 class="reveal">L'esperienza <em>prima della formazione.</em></h2>
-          <p class="body reveal" style="margin-top:16px">Sandra Corbani ha maturato la propria esperienza nel mondo della sartoria professionale, lavorando anche per Gucci, prima di intraprendere il proprio percorso indipendente.</p>
-          <p class="body reveal" style="margin-top:12px">Da questa esperienza nasce Sartolab, uno spazio dedicato alla formazione e alla creazione sartoriale.</p>
-          <div class="cta-row reveal">
-            <a href="#sartolab" class="btn btn-ghost">Conosci Sartolab</a>
-          </div>
-        </div>
-        <div class="ph ph-vert reveal" role="img" aria-label="Segnaposto ritratto Sandra">
-          <strong>Image placeholder — Sandra</strong>
-          <span>Ritratto verticale in atelier</span>
-        </div>
+    <!-- CTA finale -->
+    <section class="tpl-section tpl-wrap cr-final" id="contatti" aria-labelledby="cr-fi-t" style="text-align:center;">
+      <p class="tpl-kicker tpl-reveal" style="justify-content:center;">A.A. 2026/27 — iscrizioni aperte</p>
+      <h2 id="cr-fi-t" class="tpl-reveal" style="margin-top:16px;">La tua prossima creazione<br />può iniziare <span class="rot">da qui.</span></h2>
+      <p class="tpl-reveal" data-delay="1" style="margin-top:18px;color:var(--cr-mut);">Scopri i percorsi formativi Sartolab.</p>
+      <div class="cr-btns tpl-reveal" data-delay="1" style="justify-content:center;margin-top:36px;">
+        <a class="cr-btn" href="#academy">Scopri i corsi</a>
+        <a class="cr-btn cr-btn--alt" href="https://www.instagram.com/sartolab.academy/" target="_blank" rel="noopener">Contattaci ↗</a>
       </div>
-    </section>
-
-    <!-- 06 — ALTRI SERVIZI -->
-    <section class="section" id="oltre">
-      <div class="wrap">
-        <p class="label reveal">Oltre l'Academy</p>
-        <div class="title-block" style="max-width:680px">
-          <h2 class="reveal">La sartoria continua <em>oltre la formazione.</em></h2>
-          <p class="small reveal" style="margin-top:12px">Servizi secondari rispetto all'Academy. Non si effettuano riparazioni.</p>
-        </div>
-        <div class="serv-grid">
-          <article class="serv reveal" id="su-misura">
-            <div class="ph" role="img" aria-label="Segnaposto su misura">
-              <strong>Image placeholder — Su misura</strong>
-              <span>Prova / dettaglio capo</span>
-            </div>
-            <p class="label">Su misura</p>
-            <h3>Su misura</h3>
-            <p>Capi progettati e realizzati secondo la persona.</p>
-            <div><a href="#contatti" class="link-min">Scopri il su misura →</a></div>
-          </article>
-          <article class="serv reveal" id="creazioni">
-            <div class="ph" role="img" aria-label="Segnaposto creazioni">
-              <strong>Image placeholder — Creazioni</strong>
-              <span>Drop / pezzo sartoriale</span>
-            </div>
-            <p class="label">Creazioni</p>
-            <h3>Creazioni</h3>
-            <p>Drop e pezzi sartoriali realizzati da Sartolab.</p>
-            <div style="display:flex;gap:18px;flex-wrap:wrap">
-              <a href="#contatti" class="link-min">Scopri le creazioni →</a>
-              <a href="https://www.etsy.com/it/shop/SARTOLABacademy?etsrc=sdt" target="_blank" rel="noopener" class="link-min">Etsy ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 07 — GALLERY / VISUAL BREAK -->
-    <section class="section" id="gallery">
-      <div class="wrap">
-        <p class="label reveal">Spazio visivo</p>
-        <div class="title-block" style="max-width:640px">
-          <h2 class="reveal">La materia <em>prende forma.</em></h2>
-          <p class="small reveal" style="margin-top:12px">Spazio riservato a future fotografie: laboratorio, tessuti, lavorazioni, capi, dettagli.</p>
-        </div>
-        <div class="visual-break">
-          <div class="ph ph-row reveal" role="img" aria-label="Segnaposto laboratorio"><strong>Image placeholder — Laboratorio</strong><span>16:9 · ambiente di lavoro</span></div>
-          <div class="col">
-            <div class="ph ph-row reveal" role="img" aria-label="Segnaposto tessuti"><strong>Image placeholder — Tessuti</strong><span>Dettaglio materia</span></div>
-            <div class="ph ph-row reveal" role="img" aria-label="Segnaposto capo"><strong>Image placeholder — Capo</strong><span>Dettaglio sartoriale</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 08 — CTA FINALE -->
-    <section class="section cta-final" id="contatti">
-      <div class="wrap">
-        <p class="label reveal" style="justify-content:center">Inizia da qui</p>
-        <h2 class="reveal">La tua prossima creazione <em>può iniziare da qui.</em></h2>
-        <p class="lead reveal" style="margin-top:14px">Scopri i percorsi formativi Sartolab.</p>
-        <div class="cta-row reveal">
-          <a href="#academy" class="btn">Scopri i corsi</a>
-          <a href="https://www.instagram.com/sartolab.academy/" target="_blank" rel="noopener" class="btn btn-ghost">Contattaci</a>
-        </div>
-        <div class="info-line reveal" style="justify-content:center">
-          <span class="tag">Telefono / email — in arrivo</span>
-          <span class="tag">Indirizzo — in arrivo</span>
-          <span class="tag">Instagram · Etsy attivi</span>
-        </div>
-      </div>
+      <p class="tpl-reveal" data-delay="2" style="margin-top:28px;">
+        <span class="sl-tag">Telefono · email · indirizzo — in arrivo</span>
+      </p>
     </section>
 
   </main>
 
-  <!-- 09 — FOOTER -->
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-grid">
+  <footer class="tpl-footer" aria-label="Footer">
+    <div class="tpl-wrap" style="border-top:2px solid var(--cr-ink);padding-top:44px;">
+      <div class="tpl-footer-grid">
         <div>
-          <div class="footer-brand">SARTOLAB ACADEMY</div>
-          <p class="small" style="margin-top:10px;max-width:36ch">Scuola di sartoria artigianale — taglio, modellistica, confezione.</p>
+          <a class="sl-brand" href="#top" aria-label="SARTOLAB Academy — home">
+            <img src="assets/sartolab-logo.jpg" alt="Logo SARTOLAB Academy" width="44" height="44" />
+            <b>SARTOLAB<i>*</i></b>
+          </a>
+          <p style="color:var(--cr-mut);margin-top:16px;max-width:34ch;">
+            Scuola di sartoria artigianale — taglio, modellistica, confezione.
+          </p>
         </div>
         <div>
-          <div class="footer-links">
-            <a href="#academy">Academy</a>
-            <a href="#sandra">Sandra</a>
-            <a href="#su-misura">Su misura</a>
-            <a href="#creazioni">Creazioni</a>
-            <a href="#contatti">Contatti</a>
-          </div>
-          <div class="footer-links" style="margin-top:16px">
-            <a href="https://www.instagram.com/sartolab.academy/" target="_blank" rel="noopener">Instagram ↗</a>
-            <a href="https://www.etsy.com/it/shop/SARTOLABacademy?etsrc=sdt" target="_blank" rel="noopener">Etsy ↗</a>
-          </div>
+          <h3 style="color:var(--cr-red);opacity:1;">Indice</h3>
+          <a href="#academy">Academy</a>
+          <a href="#metodo">Metodo</a>
+          <a href="#sandra">Sandra</a>
+          <a href="#oltre">Atelier</a>
+        </div>
+        <div>
+          <h3 style="color:var(--cr-blue);opacity:1;">Contatti</h3>
+          <a href="https://www.instagram.com/sartolab.academy/" target="_blank" rel="noopener">Instagram ↗</a>
+          <a href="https://www.etsy.com/it/shop/SARTOLABacademy?etsrc=sdt" target="_blank" rel="noopener">Etsy ↗</a>
+          <a href="#contatti">Telefono · email — in arrivo</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> SARTOLAB Academy — Demo / prototipo.</span>
-        <span>Privacy · Termini — placeholder</span>
+      <div class="tpl-footer-bottom">
+        <span>© 2026 SARTOLAB Academy — demo single-page su template Creative</span>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="js/templates.js" defer></script>
 </body>
+
 </html>
